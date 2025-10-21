@@ -8,6 +8,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class UserActivity extends AppCompatActivity {
+
     private EditText nameEditText, stateEditText, ageEditText;
     private User activeUser;
 
@@ -38,8 +39,18 @@ public class UserActivity extends AppCompatActivity {
         if (activeUser != null) {
             activeUser.setName(nameEditText.getText().toString());
             activeUser.setStatus(stateEditText.getText().toString());
+
             String ageText = ageEditText.getText().toString();
-            if (!ageText.isEmpty()) activeUser.setAge(Integer.parseInt(ageText));
+            try {
+                if (!ageText.isEmpty()) {
+                    activeUser.setAge(Integer.parseInt(ageText));
+                }
+            } catch (NumberFormatException e) {
+                ageEditText.setError("Введите корректный возраст");
+                return;
+            }
+
+            MainActivity.UpdateListAndUserPanel(activeUser);
         }
         finish();
     }
