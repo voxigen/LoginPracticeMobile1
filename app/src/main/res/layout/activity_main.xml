@@ -7,15 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <ListView
-
             android:id="@+id/MainListView"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -23,15 +20,12 @@
             android:divider="@android:color/transparent"
             android:dividerHeight="8dp"
             android:padding="8dp"
-            android:background="@android:color/white"
-            />
-
+            android:background="@android:color/white" />
 
         <FrameLayout
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent">
-
 
             <TextView
                 android:id="@+id/emptyMessage"
@@ -42,14 +36,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-
             <FrameLayout
                 android:id="@+id/userPanel"
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/white">
-
 
                 <Button
                     android:id="@+id/backButton"
@@ -59,7 +51,6 @@
                     android:layout_marginTop="50dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp" />
-
 
                 <LinearLayout
                     android:layout_width="match_parent"

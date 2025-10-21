@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FragPractice">
         <activity
+            android:name=".UserActivity"
+            android:exported="false"
+            android:label="sdf"
+            android:theme="@style/Theme.FragPractice" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
